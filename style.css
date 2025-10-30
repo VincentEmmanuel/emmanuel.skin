@@ -6,59 +6,67 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-hover: #4f46e5;
-    --danger-color: #ef4444;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
-    --border-color: #e5e7eb;
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --primary-color: #000000;
+    --primary-hover: #333333;
+    --accent-gold: #D4AF37;
+    --danger-color: #C41E3A;
+    --success-color: #2D5F3F;
+    --warning-color: #B8860B;
+    --text-dark: #000000;
+    --text-light: #666666;
+    --bg-light: #FAFAFA;
+    --border-color: #E0E0E0;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #FFFFFF;
     min-height: 100vh;
     padding: 20px;
+    letter-spacing: 0.3px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     background: white;
-    border-radius: 16px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000000;
     color: white;
-    padding: 40px 30px;
+    padding: 60px 50px;
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    opacity: 0.95;
+    opacity: 0.85;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* Main Content */
 main {
-    padding: 40px 30px;
+    padding: 60px 50px;
 }
 
 /* Checker Section */
@@ -68,9 +76,9 @@ main {
 
 .input-container {
     background: var(--bg-light);
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px solid var(--border-color);
+    padding: 40px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
 }
 
 label {
@@ -82,62 +90,67 @@ label {
 
 textarea {
     width: 100%;
-    padding: 15px;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
     font-size: 0.95rem;
     font-family: inherit;
     resize: vertical;
-    transition: border-color 0.3s;
-    margin-bottom: 15px;
+    transition: border-color 0.4s ease;
+    margin-bottom: 20px;
+    background: white;
 }
 
 textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px var(--primary-color);
 }
 
 /* Buttons */
 .primary-btn,
 .secondary-btn {
-    padding: 12px 30px;
+    padding: 16px 40px;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s;
-    margin-right: 10px;
+    transition: all 0.4s ease;
+    margin-right: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .primary-btn {
     background: var(--primary-color);
     color: white;
+    border: 1px solid var(--primary-color);
 }
 
 .primary-btn:hover {
     background: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    border-color: var(--primary-hover);
 }
 
 .secondary-btn {
     background: white;
     color: var(--text-dark);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
 }
 
 .secondary-btn:hover {
     background: var(--bg-light);
+    border-color: var(--text-dark);
 }
 
 /* Results */
 .results-container {
-    margin-top: 30px;
-    padding: 30px;
+    margin-top: 40px;
+    padding: 40px;
     background: white;
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
 }
 
 .results-container h2 {
@@ -154,20 +167,20 @@ textarea:focus {
 
 .stat {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: var(--bg-light);
-    border-radius: 8px;
-    border: 2px solid var(--border-color);
+    border-radius: 0;
+    border: 1px solid var(--border-color);
 }
 
 .stat.danger {
-    background: #fef2f2;
-    border-color: #fecaca;
+    background: #FFF5F5;
+    border-color: #FFDDDD;
 }
 
 .stat.success {
-    background: #f0fdf4;
-    border-color: #bbf7d0;
+    background: #F5F8F6;
+    border-color: #D5E5D9;
 }
 
 .stat-number {
@@ -197,11 +210,13 @@ textarea:focus {
 }
 
 .flagged-item {
-    padding: 15px 20px;
-    margin-bottom: 10px;
-    background: #fef2f2;
-    border-left: 4px solid var(--danger-color);
-    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 12px;
+    background: #FFF9F5;
+    border-left: 2px solid var(--danger-color);
+    border-radius: 0;
+    border: 1px solid #FFE8E0;
+    border-left: 2px solid var(--danger-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,8 +238,9 @@ textarea:focus {
     font-size: 0.85rem;
     color: var(--text-light);
     background: white;
-    padding: 4px 10px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
 }
 
 .no-flagged {
@@ -236,8 +252,8 @@ textarea:focus {
 
 /* Content Sections */
 .content-section {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -275,8 +291,9 @@ textarea:focus {
 /* How To List */
 .how-to-list {
     background: var(--bg-light);
-    padding: 25px 30px;
-    border-radius: 8px;
+    padding: 30px 35px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
 }
 
 .how-to-list li {
@@ -292,39 +309,41 @@ textarea:focus {
 .rating-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
+    gap: 20px;
+    padding: 20px;
     background: var(--bg-light);
-    border-radius: 8px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
 }
 
 .rating-badge {
     display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 0;
+    font-weight: 600;
     font-size: 0.9rem;
-    min-width: 50px;
+    min-width: 55px;
     text-align: center;
+    border: 1px solid currentColor;
 }
 
 .rating-badge.rating-0 {
-    background: #d1fae5;
+    background: #F5F8F6;
     color: var(--success-color);
 }
 
 .rating-badge.rating-1 {
-    background: #dbeafe;
-    color: #3b82f6;
+    background: #F5F7FA;
+    color: #4A5568;
 }
 
 .rating-badge.rating-3 {
-    background: #fef3c7;
+    background: #FFFBF0;
     color: var(--warning-color);
 }
 
 .rating-badge.rating-4 {
-    background: #fee2e2;
+    background: #FFF5F5;
     color: var(--danger-color);
 }
 
@@ -336,10 +355,15 @@ textarea:focus {
 }
 
 .ingredient-card {
-    padding: 20px;
+    padding: 30px;
     background: var(--bg-light);
-    border-radius: 8px;
-    border: 2px solid var(--border-color);
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.ingredient-card:hover {
+    box-shadow: var(--shadow);
 }
 
 .ingredient-card h3 {
@@ -358,26 +382,29 @@ textarea:focus {
 }
 
 .faq-item h3 {
-    color: var(--primary-color);
+    color: var(--text-dark);
     margin-bottom: 10px;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 /* About Section */
 .about ul {
     background: var(--bg-light);
-    padding: 20px 30px;
-    border-radius: 8px;
+    padding: 25px 35px;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
     margin-top: 15px;
 }
 
 /* Footer */
 footer {
-    background: var(--bg-light);
-    padding: 30px;
+    background: #000000;
+    padding: 40px;
     text-align: center;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 footer p {
