@@ -26,7 +26,8 @@ body {
     color: var(--text-dark);
     background: #FFFFFF;
     min-height: 100vh;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     letter-spacing: 0.3px;
 }
 
@@ -36,7 +37,6 @@ body {
     background: white;
     border-radius: 0;
     box-shadow: none;
-    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
@@ -44,24 +44,29 @@ body {
 header {
     background: #000000;
     color: white;
-    padding: 60px 50px;
+    padding: 50px 20px;
     text-align: center;
-    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    margin: 0;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    margin: 0 0 15px 0;
     font-weight: 300;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
     text-transform: uppercase;
+    color: white;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    opacity: 0.85;
+    font-size: 0.95rem;
+    opacity: 0.75;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 /* Main Content */
@@ -400,11 +405,13 @@ textarea:focus {
 /* Footer */
 footer {
     background: #000000;
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+    width: 100%;
+    margin: 0;
 }
 
 footer p {
@@ -420,19 +427,21 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 0;
     }
 
     header {
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
-    header h1 {
-        font-size: 1.5rem;
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
     }
 
     .subtitle {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
     }
 
     main {
