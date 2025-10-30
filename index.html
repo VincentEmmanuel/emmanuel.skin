@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Pore-Clogging Ingredients Checker | Emmanuel.Skin</title>
+    <meta name="description" content="Instantly check if your skincare products contain comedogenic (pore-clogging) ingredients. Free tool based on scientific research. Paste your ingredients to see if they're acne-safe.">
+    <meta name="keywords" content="comedogenic ingredients, pore clogging checker, acne safe ingredients, skincare checker, non-comedogenic">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Pore-Clogging Ingredients Checker">
+    <meta property="og:description" content="Check if your skincare has acne-causing ingredients">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emmanuel.skin">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Pore-Clogging Ingredients Checker">
+    <meta name="twitter:description" content="Check if your skincare has acne-causing ingredients">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://emmanuel.skin">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧴 Pore-Clogging Ingredients Checker</h1>
+            <p class="subtitle">Instantly check if your skincare contains comedogenic ingredients</p>
+        </header>
+
+        <main>
+            <!-- Checker Tool -->
+            <section class="checker-section">
+                <div class="input-container">
+                    <label for="ingredients-input">
+                        <strong>Paste your product's ingredients here:</strong>
+                    </label>
+                    <textarea 
+                        id="ingredients-input" 
+                        placeholder="Example: Water, Glycerin, Coconut Oil, Cetyl Alcohol, Niacinamide..."
+                        rows="6"
+                    ></textarea>
+                    <button id="check-btn" class="primary-btn">Check Ingredients</button>
+                    <button id="clear-btn" class="secondary-btn">Clear</button>
+                </div>
+
+                <!-- Results -->
+                <div id="results" class="results-container" style="display: none;">
+                    <h2>Results</h2>
+                    <div class="results-summary">
+                        <div class="stat">
+                            <span class="stat-number" id="total-checked">0</span>
+                            <span class="stat-label">Ingredients Checked</span>
+                        </div>
+                        <div class="stat danger">
+                            <span class="stat-number" id="flagged-count">0</span>
+                            <span class="stat-label">Pore-Cloggers Found</span>
+                        </div>
+                        <div class="stat success">
+                            <span class="stat-number" id="safe-count">0</span>
+                            <span class="stat-label">Safe Ingredients</span>
+                        </div>
+                    </div>
+
+                    <div id="flagged-ingredients" class="flagged-list"></div>
+                </div>
+            </section>
+
+            <!-- Educational Content -->
+            <section class="content-section">
+                <h2>What Are Comedogenic Ingredients?</h2>
+                <p>Comedogenic ingredients are substances that have a tendency to clog pores, which can lead to acne breakouts. The term comes from "comedones," the medical name for clogged pores (blackheads and whiteheads).</p>
+                <p>These ingredients form a barrier on the skin that can trap oil, dead skin cells, and bacteria inside your pores, potentially causing inflammation and acne.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Use This Checker</h2>
+                <ol class="how-to-list">
+                    <li>Find your skincare or makeup product online (check the brand's website or retailer)</li>
+                    <li>Look for the "Ingredients" section and copy the full list</li>
+                    <li>Paste it into the text box above</li>
+                    <li>Click "Check Ingredients" to see which ones may clog your pores</li>
+                    <li>Review the results - pay special attention to ingredients with ratings 3-5</li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Understanding Comedogenic Ratings</h2>
+                <div class="rating-guide">
+                    <div class="rating-item">
+                        <span class="rating-badge rating-0">0</span>
+                        <div>
+                            <strong>Non-Comedogenic</strong>
+                            <p>Won't clog pores - safe for acne-prone skin</p>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-badge rating-1">1-2</span>
+                        <div>
+                            <strong>Low</strong>
+                            <p>Slightly comedogenic - generally safe for most people</p>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-badge rating-3">3</span>
+                        <div>
+                            <strong>Moderate</strong>
+                            <p>Moderately comedogenic - may cause issues for sensitive skin</p>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-badge rating-4">4-5</span>
+                        <div>
+                            <strong>High</strong>
+                            <p>Very comedogenic - avoid if you're acne-prone</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Most Common Pore-Clogging Ingredients</h2>
+                <div class="common-ingredients">
+                    <div class="ingredient-card">
+                        <h3>Coconut Oil</h3>
+                        <span class="rating-badge rating-4">4/5</span>
+                        <p>Despite being natural, coconut oil is highly comedogenic and can trigger breakouts in acne-prone skin.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <h3>Isopropyl Myristate</h3>
+                        <span class="rating-badge rating-4">5/5</span>
+                        <p>One of the most pore-clogging ingredients commonly found in cosmetics and skincare.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <h3>Lanolin</h3>
+                        <span class="rating-badge rating-4">4/5</span>
+                        <p>Wool-derived ingredient that's very occlusive and can easily clog pores.</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <h3>Algae Extract</h3>
+                        <span class="rating-badge rating-4">5/5</span>
+                        <p>Often found in "natural" products but highly comedogenic.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section faq">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>Are all oils comedogenic?</h3>
+                    <p>No! Some oils like jojoba oil, squalane, and mineral oil are non-comedogenic. However, coconut oil, wheat germ oil, and linseed oil are highly comedogenic.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does "non-comedogenic" on the label mean it's safe?</h3>
+                    <p>Not necessarily. The term "non-comedogenic" is not regulated, so companies can use it even if their products contain pore-clogging ingredients. Always check the ingredients list yourself.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What rating should I avoid?</h3>
+                    <p>If you're acne-prone, try to avoid ingredients rated 3-5, especially if they appear in the first 7 ingredients (which means they're present in higher concentrations).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can non-comedogenic products still cause acne?</h3>
+                    <p>Yes. Acne can be caused by many factors including hormones, bacteria, stress, and diet. However, removing comedogenic products from your routine can significantly help.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How accurate is this checker?</h3>
+                    <p>This tool is based on scientific research including the landmark Fulton (1989) study and data from Acne.org. However, individual reactions vary - what clogs pores for one person may be fine for another.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Should I check my shampoo and conditioner too?</h3>
+                    <p>Yes! Hair products can transfer to your face, back, and chest, causing breakouts. Check everything that might touch your skin.</p>
+                </div>
+            </section>
+
+            <section class="content-section about">
+                <h2>About This Tool</h2>
+                <p>This ingredient checker was created by Emmanuel to help people with acne-prone skin make informed decisions about their skincare products.</p>
+                <p>The data is based on peer-reviewed scientific research, including studies by Dr. James E. Fulton (1989) and comprehensive databases from Acne.org.</p>
+                <p><strong>Sources:</strong></p>
+                <ul>
+                    <li>Fulton, J. E. (1989). "Comedogenicity and irritancy of commonly used ingredients in skin care products." Journal of the Society of Cosmetic Chemists.</li>
+                    <li>Acne.org Comedogenic Ingredients Database</li>
+                    <li>Various peer-reviewed dermatology studies (1972-2006)</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Emmanuel.Skin | Free Pore-Clogging Ingredients Checker</p>
+            <p class="disclaimer">This tool is for informational purposes only and is not a substitute for professional medical advice.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

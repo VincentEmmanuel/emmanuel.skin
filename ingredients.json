@@ -1,0 +1,332 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-10-30",
+  "sources": [
+    "Fulton, J. E. (1989). Comedogenicity and irritancy of commonly used ingredients in skin care products.",
+    "Acne.org Research Database",
+    "Scientific comedogenicity studies (1972-2006)"
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Isopropyl Myristate",
+      "alternateNames": ["IPM"],
+      "rating": 5,
+      "category": "Emollient",
+      "description": "Highly comedogenic - avoid if acne-prone"
+    },
+    {
+      "id": 2,
+      "name": "Isopropyl Palmitate",
+      "alternateNames": ["IPP", "Palmitic Acid Isopropyl Ester"],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 3,
+      "name": "Isopropyl Isostearate",
+      "alternateNames": [],
+      "rating": 5,
+      "category": "Emollient"
+    },
+    {
+      "id": 4,
+      "name": "Coconut Oil",
+      "alternateNames": ["Cocos Nucifera Oil", "Cocos Nucifera (Coconut) Oil"],
+      "rating": 4,
+      "category": "Oil",
+      "description": "Very comedogenic despite being natural"
+    },
+    {
+      "id": 5,
+      "name": "Cocoa Butter",
+      "alternateNames": ["Theobroma Cacao Seed Butter", "Theobroma Cacao"],
+      "rating": 4,
+      "category": "Butter"
+    },
+    {
+      "id": 6,
+      "name": "Coconut Butter",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Butter"
+    },
+    {
+      "id": 7,
+      "name": "Lanolin",
+      "alternateNames": ["Acetylated Lanolin", "Lanolin Alcohol", "Adeps Lanae"],
+      "rating": 4,
+      "category": "Wax"
+    },
+    {
+      "id": 8,
+      "name": "Myristyl Myristate",
+      "alternateNames": [],
+      "rating": 5,
+      "category": "Emollient"
+    },
+    {
+      "id": 9,
+      "name": "Octyl Palmitate",
+      "alternateNames": ["Ethylhexyl Palmitate"],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 10,
+      "name": "Octyl Stearate",
+      "alternateNames": ["Ethylhexyl Stearate"],
+      "rating": 5,
+      "category": "Emollient"
+    },
+    {
+      "id": 11,
+      "name": "Oleic Acid",
+      "alternateNames": ["Cis-9-Octadecenoic Acid"],
+      "rating": 2,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 12,
+      "name": "Oleth-3",
+      "alternateNames": [],
+      "rating": 5,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 13,
+      "name": "Palmitic Acid",
+      "alternateNames": [],
+      "rating": 2,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 14,
+      "name": "Stearic Acid",
+      "alternateNames": ["Octadecanoic Acid"],
+      "rating": 2,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 15,
+      "name": "Sodium Lauryl Sulfate",
+      "alternateNames": ["SLS"],
+      "rating": 5,
+      "category": "Surfactant",
+      "description": "Can be highly irritating and comedogenic"
+    },
+    {
+      "id": 16,
+      "name": "Sodium Laureth Sulfate",
+      "alternateNames": ["SLES"],
+      "rating": 3,
+      "category": "Surfactant"
+    },
+    {
+      "id": 17,
+      "name": "Lauric Acid",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 18,
+      "name": "Myristic Acid",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 19,
+      "name": "Cetyl Alcohol",
+      "alternateNames": ["1-Hexadecanol"],
+      "rating": 2,
+      "category": "Fatty Alcohol"
+    },
+    {
+      "id": 20,
+      "name": "Cetearyl Alcohol",
+      "alternateNames": ["Cetostearyl Alcohol"],
+      "rating": 2,
+      "category": "Fatty Alcohol"
+    },
+    {
+      "id": 21,
+      "name": "Stearyl Alcohol",
+      "alternateNames": ["1-Octadecanol"],
+      "rating": 2,
+      "category": "Fatty Alcohol"
+    },
+    {
+      "id": 22,
+      "name": "Wheat Germ Oil",
+      "alternateNames": ["Triticum Vulgare Germ Oil"],
+      "rating": 5,
+      "category": "Oil"
+    },
+    {
+      "id": 23,
+      "name": "Linseed Oil",
+      "alternateNames": ["Flaxseed Oil", "Linum Usitatissimum Seed Oil"],
+      "rating": 4,
+      "category": "Oil"
+    },
+    {
+      "id": 24,
+      "name": "Soybean Oil",
+      "alternateNames": ["Glycine Soja Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 25,
+      "name": "Corn Oil",
+      "alternateNames": ["Zea Mays Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 26,
+      "name": "Avocado Oil",
+      "alternateNames": ["Persea Gratissima Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 27,
+      "name": "Almond Oil",
+      "alternateNames": ["Prunus Amygdalus Dulcis Oil", "Sweet Almond Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 28,
+      "name": "Olive Oil",
+      "alternateNames": ["Olea Europaea Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 29,
+      "name": "Sesame Oil",
+      "alternateNames": ["Sesamum Indicum Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 30,
+      "name": "Shea Butter",
+      "alternateNames": ["Butyrospermum Parkii Butter"],
+      "rating": 0,
+      "category": "Butter",
+      "description": "Generally non-comedogenic"
+    },
+    {
+      "id": 31,
+      "name": "Algae Extract",
+      "alternateNames": ["Seaweed Extract", "Marine Extract"],
+      "rating": 5,
+      "category": "Extract"
+    },
+    {
+      "id": 32,
+      "name": "Carrageenan",
+      "alternateNames": ["Chondrus Crispus Extract"],
+      "rating": 5,
+      "category": "Thickener"
+    },
+    {
+      "id": 33,
+      "name": "D & C Red Dyes",
+      "alternateNames": ["Red 3", "Red 17", "Red 21", "Red 27", "Red 30", "Red 36"],
+      "rating": 3,
+      "category": "Colorant"
+    },
+    {
+      "id": 34,
+      "name": "Petroleum Jelly",
+      "alternateNames": ["Petrolatum", "Vaseline"],
+      "rating": 0,
+      "category": "Occlusive",
+      "description": "Generally safe for most skin types"
+    },
+    {
+      "id": 35,
+      "name": "Mineral Oil",
+      "alternateNames": ["Paraffinum Liquidum"],
+      "rating": 0,
+      "category": "Occlusive",
+      "description": "Generally non-comedogenic"
+    },
+    {
+      "id": 36,
+      "name": "Butyl Stearate",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emollient"
+    },
+    {
+      "id": 37,
+      "name": "Decyl Oleate",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emollient"
+    },
+    {
+      "id": 38,
+      "name": "Isocetyl Stearate",
+      "alternateNames": [],
+      "rating": 5,
+      "category": "Emollient"
+    },
+    {
+      "id": 39,
+      "name": "Isostearyl Isostearate",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 40,
+      "name": "Isostearyl Neopentanoate",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emollient"
+    },
+    {
+      "id": 41,
+      "name": "Myristyl Lactate",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 42,
+      "name": "Propylene Glycol Monostearate",
+      "alternateNames": ["PG Monostearate"],
+      "rating": 4,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 43,
+      "name": "Acetylated Lanolin Alcohol",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 44,
+      "name": "PEG-8 Stearate",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 45,
+      "name": "PEG-100 Stearate",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emulsifier"
+    }
+  ]
+}
