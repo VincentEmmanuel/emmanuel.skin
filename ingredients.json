@@ -1,10 +1,13 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "lastUpdated": "2025-10-30",
   "sources": [
-    "Fulton, J. E. (1989). Comedogenicity and irritancy of commonly used ingredients in skin care products.",
-    "Acne.org Research Database",
-    "Scientific comedogenicity studies (1972-2006)"
+    "Fulton, J. E. (1989). Comedogenicity and irritancy of commonly used ingredients in skin care products. J. Soc. Cosmet. Chem. 40: 321-333",
+    "Acne.org Comedogenic Ingredients Database (2025)",
+    "CosDNA Cosmetic Ingredient Database",
+    "Platinum Skincare Comedogenic Ratings",
+    "Herbal Dynamics Beauty Comedogenic Scale Research",
+    "Scientific comedogenicity studies using rabbit ear assay and human testing (1972-2006)"
   ],
   "ingredients": [
     {
@@ -327,6 +330,767 @@
       "alternateNames": [],
       "rating": 1,
       "category": "Emulsifier"
+    },
+    {
+      "id": 46,
+      "name": "Argan Oil",
+      "alternateNames": ["Argania Spinosa Kernel Oil"],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, suitable for all skin types"
+    },
+    {
+      "id": 47,
+      "name": "Jojoba Oil",
+      "alternateNames": ["Simmondsia Chinensis Seed Oil"],
+      "rating": 2,
+      "category": "Oil",
+      "description": "Low comedogenic potential despite higher rating"
+    },
+    {
+      "id": 48,
+      "name": "Rosehip Seed Oil",
+      "alternateNames": ["Rosa Canina Fruit Oil", "Rosa Mosqueta Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 49,
+      "name": "Grapeseed Oil",
+      "alternateNames": ["Vitis Vinifera Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 50,
+      "name": "Hemp Seed Oil",
+      "alternateNames": ["Cannabis Sativa Seed Oil"],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, high in linoleic acid"
+    },
+    {
+      "id": 51,
+      "name": "Castor Oil",
+      "alternateNames": ["Ricinus Communis Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 52,
+      "name": "Safflower Oil",
+      "alternateNames": ["Carthamus Tinctorius Seed Oil"],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic"
+    },
+    {
+      "id": 53,
+      "name": "Sunflower Seed Oil",
+      "alternateNames": ["Helianthus Annuus Seed Oil"],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, high in linoleic acid"
+    },
+    {
+      "id": 54,
+      "name": "Apricot Kernel Oil",
+      "alternateNames": ["Prunus Armeniaca Kernel Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 55,
+      "name": "Evening Primrose Oil",
+      "alternateNames": ["Oenothera Biennis Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 56,
+      "name": "Tea Tree Oil",
+      "alternateNames": ["Melaleuca Alternifolia Leaf Oil"],
+      "rating": 0,
+      "category": "Oil",
+      "description": "Non-comedogenic, antibacterial properties"
+    },
+    {
+      "id": 57,
+      "name": "Neem Oil",
+      "alternateNames": ["Melia Azadirachta Seed Oil", "Azadirachta Indica Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 58,
+      "name": "Peanut Oil",
+      "alternateNames": ["Arachis Hypogaea Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 59,
+      "name": "Rice Bran Oil",
+      "alternateNames": ["Oryza Sativa Bran Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 60,
+      "name": "Cottonseed Oil",
+      "alternateNames": ["Gossypium Herbaceum Seed Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 61,
+      "name": "Palm Oil",
+      "alternateNames": ["Elaeis Guineensis Oil"],
+      "rating": 4,
+      "category": "Oil"
+    },
+    {
+      "id": 62,
+      "name": "Marula Oil",
+      "alternateNames": ["Sclerocarya Birrea Seed Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 63,
+      "name": "Black Cumin Seed Oil",
+      "alternateNames": ["Nigella Sativa Seed Oil", "Black Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 64,
+      "name": "Borage Oil",
+      "alternateNames": ["Borago Officinalis Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 65,
+      "name": "Cranberry Seed Oil",
+      "alternateNames": ["Vaccinium Macrocarpon Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 66,
+      "name": "Peach Kernel Oil",
+      "alternateNames": ["Prunus Persica Kernel Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 67,
+      "name": "Pumpkin Seed Oil",
+      "alternateNames": ["Cucurbita Pepo Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 68,
+      "name": "Tamanu Oil",
+      "alternateNames": ["Calophyllum Inophyllum Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 69,
+      "name": "Hazelnut Oil",
+      "alternateNames": ["Corylus Avellana Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 70,
+      "name": "Macadamia Nut Oil",
+      "alternateNames": ["Macadamia Ternifolia Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 71,
+      "name": "Carrot Seed Oil",
+      "alternateNames": ["Daucus Carota Sativa Seed Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 72,
+      "name": "Chia Seed Oil",
+      "alternateNames": ["Salvia Hispanica Seed Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 73,
+      "name": "Kukui Nut Oil",
+      "alternateNames": ["Aleurites Moluccana Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 74,
+      "name": "Moringa Oil",
+      "alternateNames": ["Moringa Oleifera Seed Oil"],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 75,
+      "name": "Mink Oil",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Oil"
+    },
+    {
+      "id": 76,
+      "name": "Abyssinian Seed Oil",
+      "alternateNames": ["Crambe Abyssinica Seed Oil"],
+      "rating": 0,
+      "category": "Oil"
+    },
+    {
+      "id": 77,
+      "name": "Black Currant Seed Oil",
+      "alternateNames": ["Ribes Nigrum Seed Oil"],
+      "rating": 0,
+      "category": "Oil"
+    },
+    {
+      "id": 78,
+      "name": "Blueberry Seed Oil",
+      "alternateNames": ["Vaccinium Corymbosum Seed Oil"],
+      "rating": 0,
+      "category": "Oil"
+    },
+    {
+      "id": 79,
+      "name": "Red Raspberry Seed Oil",
+      "alternateNames": ["Rubus Idaeus Seed Oil"],
+      "rating": 0,
+      "category": "Oil"
+    },
+    {
+      "id": 80,
+      "name": "Watermelon Seed Oil",
+      "alternateNames": ["Citrullus Lanatus Seed Oil"],
+      "rating": 0,
+      "category": "Oil"
+    },
+    {
+      "id": 81,
+      "name": "Babassu Oil",
+      "alternateNames": ["Orbignya Oleifera Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 82,
+      "name": "Broccoli Seed Oil",
+      "alternateNames": ["Brassica Oleracea Italica Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 83,
+      "name": "Camellia Seed Oil",
+      "alternateNames": ["Camellia Oleifera Seed Oil", "Tea Seed Oil"],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 84,
+      "name": "Emu Oil",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Oil"
+    },
+    {
+      "id": 85,
+      "name": "Acai Berry Oil",
+      "alternateNames": ["Euterpe Oleracea Fruit Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 86,
+      "name": "Baobab Seed Oil",
+      "alternateNames": ["Adansonia Digitata Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 87,
+      "name": "Brazil Nut Oil",
+      "alternateNames": ["Bertholletia Excelsa Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 88,
+      "name": "Buriti Oil",
+      "alternateNames": ["Mauritia Flexuosa Fruit Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 89,
+      "name": "Cherry Kernel Oil",
+      "alternateNames": ["Prunus Avium Seed Oil"],
+      "rating": 2,
+      "category": "Oil"
+    },
+    {
+      "id": 90,
+      "name": "Mango Butter",
+      "alternateNames": ["Mangifera Indica Seed Butter"],
+      "rating": 2,
+      "category": "Butter"
+    },
+    {
+      "id": 91,
+      "name": "Beeswax",
+      "alternateNames": ["Cera Alba", "Cera Flava"],
+      "rating": 2,
+      "category": "Wax"
+    },
+    {
+      "id": 92,
+      "name": "Candelilla Wax",
+      "alternateNames": ["Euphorbia Cerifera Cera"],
+      "rating": 1,
+      "category": "Wax"
+    },
+    {
+      "id": 93,
+      "name": "Carnauba Wax",
+      "alternateNames": ["Copernicia Cerifera Cera"],
+      "rating": 1,
+      "category": "Wax"
+    },
+    {
+      "id": 94,
+      "name": "Dimethicone",
+      "alternateNames": ["Polydimethylsiloxane"],
+      "rating": 1,
+      "category": "Silicone",
+      "description": "Generally non-comedogenic silicone"
+    },
+    {
+      "id": 95,
+      "name": "Cyclopentasiloxane",
+      "alternateNames": ["D5"],
+      "rating": 0,
+      "category": "Silicone",
+      "description": "Volatile silicone, evaporates quickly"
+    },
+    {
+      "id": 96,
+      "name": "Cyclomethicone",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Silicone",
+      "description": "Volatile silicone blend"
+    },
+    {
+      "id": 97,
+      "name": "Simethicone",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Silicone"
+    },
+    {
+      "id": 98,
+      "name": "Laureth-4",
+      "alternateNames": [],
+      "rating": 5,
+      "category": "Emulsifier",
+      "description": "Highly comedogenic emulsifier"
+    },
+    {
+      "id": 99,
+      "name": "Steareth-10",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 100,
+      "name": "Ceteareth-20",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emulsifier",
+      "description": "Can be comedogenic, especially combined with cetearyl alcohol"
+    },
+    {
+      "id": 101,
+      "name": "Polysorbate 20",
+      "alternateNames": ["Tween 20"],
+      "rating": 0,
+      "category": "Emulsifier",
+      "description": "Non-comedogenic surfactant"
+    },
+    {
+      "id": 102,
+      "name": "Polysorbate 60",
+      "alternateNames": ["Tween 60"],
+      "rating": 2,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 103,
+      "name": "Polysorbate 80",
+      "alternateNames": ["Tween 80"],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 104,
+      "name": "Glyceryl Stearate SE",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 105,
+      "name": "Glyceryl Stearate NSE",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 106,
+      "name": "Oleth-10",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 107,
+      "name": "PEG-16 Lanolin",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 108,
+      "name": "PEG-75 Lanolin",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 109,
+      "name": "Laureth-23",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 110,
+      "name": "Sorbitan Oleate",
+      "alternateNames": ["Span 80"],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 111,
+      "name": "Glycerin",
+      "alternateNames": ["Glycerol"],
+      "rating": 0,
+      "category": "Humectant",
+      "description": "Non-comedogenic, excellent hydrator"
+    },
+    {
+      "id": 112,
+      "name": "Butylene Glycol",
+      "alternateNames": ["1,3-Butanediol"],
+      "rating": 1,
+      "category": "Humectant"
+    },
+    {
+      "id": 113,
+      "name": "Propylene Glycol",
+      "alternateNames": ["1,2-Propanediol"],
+      "rating": 0,
+      "category": "Humectant",
+      "description": "Non-comedogenic solvent and humectant"
+    },
+    {
+      "id": 114,
+      "name": "Sodium Hyaluronate",
+      "alternateNames": ["Hyaluronic Acid Sodium Salt"],
+      "rating": 0,
+      "category": "Humectant",
+      "description": "Non-comedogenic, molecular weight dependent"
+    },
+    {
+      "id": 115,
+      "name": "Lanolin Alcohol",
+      "alternateNames": [],
+      "rating": 2,
+      "category": "Fatty Alcohol"
+    },
+    {
+      "id": 116,
+      "name": "Allantoin",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Active",
+      "description": "Soothing, non-comedogenic"
+    },
+    {
+      "id": 117,
+      "name": "Ascorbic Acid",
+      "alternateNames": ["Vitamin C", "L-Ascorbic Acid"],
+      "rating": 0,
+      "category": "Active",
+      "description": "Non-comedogenic antioxidant"
+    },
+    {
+      "id": 118,
+      "name": "Tocopherol",
+      "alternateNames": ["Vitamin E"],
+      "rating": 2,
+      "category": "Antioxidant"
+    },
+    {
+      "id": 119,
+      "name": "Vitamin A Palmitate",
+      "alternateNames": ["Retinyl Palmitate"],
+      "rating": 2,
+      "category": "Active"
+    },
+    {
+      "id": 120,
+      "name": "Ascorbyl Palmitate",
+      "alternateNames": ["Vitamin C Palmitate"],
+      "rating": 2,
+      "category": "Antioxidant"
+    },
+    {
+      "id": 121,
+      "name": "Zinc Oxide",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Sunscreen",
+      "description": "Non-comedogenic mineral sunscreen"
+    },
+    {
+      "id": 122,
+      "name": "Sodium Chloride",
+      "alternateNames": ["Salt"],
+      "rating": 5,
+      "category": "Other",
+      "description": "Can clog pores in high concentrations"
+    },
+    {
+      "id": 123,
+      "name": "Capric Acid",
+      "alternateNames": ["Decanoic Acid"],
+      "rating": 2,
+      "category": "Fatty Acid"
+    },
+    {
+      "id": 124,
+      "name": "Benzoic Acid",
+      "alternateNames": [],
+      "rating": 2,
+      "category": "Preservative"
+    },
+    {
+      "id": 125,
+      "name": "Camphor",
+      "alternateNames": [],
+      "rating": 2,
+      "category": "Active"
+    },
+    {
+      "id": 126,
+      "name": "Talc",
+      "alternateNames": ["Magnesium Silicate"],
+      "rating": 1,
+      "category": "Powder"
+    },
+    {
+      "id": 127,
+      "name": "Squalene",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emollient",
+      "description": "Shark-derived or plant-derived"
+    },
+    {
+      "id": 128,
+      "name": "Squalane",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Emollient",
+      "description": "Hydrogenated squalene, non-comedogenic"
+    },
+    {
+      "id": 129,
+      "name": "Beta Carotene",
+      "alternateNames": ["Provitamin A"],
+      "rating": 1,
+      "category": "Antioxidant"
+    },
+    {
+      "id": 130,
+      "name": "Colloidal Sulfur",
+      "alternateNames": ["Sulfur"],
+      "rating": 3,
+      "category": "Active",
+      "description": "Acne treatment ingredient"
+    },
+    {
+      "id": 131,
+      "name": "Dioctyl Succinate",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emollient"
+    },
+    {
+      "id": 132,
+      "name": "Sulfated Castor Oil",
+      "alternateNames": ["Turkey Red Oil"],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 133,
+      "name": "Sulfated Jojoba Oil",
+      "alternateNames": [],
+      "rating": 3,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 134,
+      "name": "Red Algae",
+      "alternateNames": ["Rhodophyta"],
+      "rating": 5,
+      "category": "Extract"
+    },
+    {
+      "id": 135,
+      "name": "Stearyl Heptanoate",
+      "alternateNames": [],
+      "rating": 4,
+      "category": "Emollient"
+    },
+    {
+      "id": 136,
+      "name": "Lithium Stearate",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 137,
+      "name": "Magnesium Stearate",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emulsifier"
+    },
+    {
+      "id": 138,
+      "name": "Sodium PCA",
+      "alternateNames": ["Sodium Pyrrolidone Carboxylic Acid"],
+      "rating": 0,
+      "category": "Humectant"
+    },
+    {
+      "id": 139,
+      "name": "Carbomer",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Thickener",
+      "description": "Non-comedogenic gel thickener"
+    },
+    {
+      "id": 140,
+      "name": "Ethylparaben",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Preservative"
+    },
+    {
+      "id": 141,
+      "name": "Propylparaben",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Preservative"
+    },
+    {
+      "id": 142,
+      "name": "Papain",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Enzyme",
+      "description": "Papaya enzyme, exfoliant"
+    },
+    {
+      "id": 143,
+      "name": "Aloe Vera",
+      "alternateNames": ["Aloe Barbadensis Leaf Juice"],
+      "rating": 0,
+      "category": "Extract",
+      "description": "Soothing, non-comedogenic"
+    },
+    {
+      "id": 144,
+      "name": "Calendula",
+      "alternateNames": ["Calendula Officinalis Extract"],
+      "rating": 1,
+      "category": "Extract"
+    },
+    {
+      "id": 145,
+      "name": "Lanolin Oil",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Emollient"
+    },
+    {
+      "id": 146,
+      "name": "Lanolin Wax",
+      "alternateNames": [],
+      "rating": 1,
+      "category": "Wax"
+    },
+    {
+      "id": 147,
+      "name": "Polyethylene Glycol",
+      "alternateNames": ["PEG-400", "PEG 400"],
+      "rating": 1,
+      "category": "Humectant"
+    },
+    {
+      "id": 148,
+      "name": "Acetone",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Solvent"
+    },
+    {
+      "id": 149,
+      "name": "Magnesium Aluminum Silicate",
+      "alternateNames": [],
+      "rating": 0,
+      "category": "Thickener"
+    },
+    {
+      "id": 150,
+      "name": "Coconut Oil (Fractionated)",
+      "alternateNames": ["Caprylic/Capric Triglyceride"],
+      "rating": 2,
+      "category": "Emollient",
+      "description": "Lower comedogenic rating than regular coconut oil"
     }
   ]
 }
