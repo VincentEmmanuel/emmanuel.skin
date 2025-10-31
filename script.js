@@ -277,13 +277,14 @@ function validateForm() {
     const submitBtn = document.getElementById('feedback-submit');
     const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
 
-    const isValid =
-        message.value.length >= 10 &&
-        turnstileResponse && turnstileResponse.value !== '';
+    if (!message || !submitBtn) return;
 
-    if (submitBtn) {
-        submitBtn.disabled = !isValid;
-    }
+    const hasValidMessage = message.value.length >= 10;
+    const hasTurnstileToken = turnstileResponse && turnstileResponse.value && turnstileResponse.value.trim() !== '';
+
+    const isValid = hasValidMessage && hasTurnstileToken;
+
+    submitBtn.disabled = !isValid;
 }
 
 // Check rate limiting
@@ -453,7 +454,10 @@ function showFeedbackError(message) {
 
 // Turnstile callback (called when verification completes)
 window.onTurnstileSuccess = function() {
-    validateForm();
+    // Small delay to ensure token is populated in DOM
+    setTimeout(() => {
+        validateForm();
+    }, 100);
 };
 
 console.log('✅ Feedback form initialized');
