@@ -485,6 +485,117 @@ textarea:focus {
     margin-top: 20px;
 }
 
+/* Feedback Section */
+.feedback-section {
+    background: transparent;
+}
+
+.feedback-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 0;
+}
+
+/* Honeypot - hidden from humans, visible to bots */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.form-row input:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+    background: transparent;
+}
+
+.feedback-form textarea {
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+#feedback-submit {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 16px;
+    margin-right: 0;
+}
+
+#feedback-submit:disabled {
+    background: #E0E0E0;
+    border-color: #E0E0E0;
+    color: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#feedback-submit:disabled:hover {
+    background: #E0E0E0;
+    border-color: #E0E0E0;
+    transform: none;
+}
+
+.feedback-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 0;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease-out;
+    text-align: center;
+}
+
+.success-message {
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.error-message {
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--danger-color);
+    color: var(--danger-color);
+}
+
+/* Cloudflare Turnstile styling */
+.cf-turnstile {
+    margin: 20px 0;
+}
+
 /* Footer */
 footer {
     background: #000000;
@@ -593,6 +704,17 @@ footer p {
     footer {
         padding: 40px 20px;
         margin-top: 60px;
+    }
+
+    /* Feedback Form Mobile */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-row input,
+    .feedback-form textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
     }
 }
 

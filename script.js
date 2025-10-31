@@ -237,3 +237,223 @@ window.addEventListener('error', (e) => {
 
 // Log when script is loaded
 console.log('✅ Emmanuel.Skin Ingredient Checker loaded successfully');
+
+// ============================================
+// FEEDBACK FORM HANDLING
+// ============================================
+
+// Feedback form variables
+let formOpenTime = null;
+const MIN_SUBMISSION_TIME = 3000; // 3 seconds minimum
+const MAX_SUBMISSIONS_PER_DAY = 3;
+const WEB3FORMS_KEY = '915fd905-fbbd-4ee0-b53d-c09ffb90d8ac';
+
+// Initialize feedback form
+document.addEventListener('DOMContentLoaded', () => {
+    initFeedbackForm();
+});
+
+function initFeedbackForm() {
+    const form = document.getElementById('feedback-form');
+    const messageInput = document.getElementById('feedback-message');
+    const submitBtn = document.getElementById('feedback-submit');
+
+    // Track when form becomes visible/ready
+    formOpenTime = Date.now();
+
+    // Enable submit button when form is valid
+    if (form) {
+        form.addEventListener('input', validateForm);
+        form.addEventListener('submit', handleFeedbackSubmit);
+    }
+
+    // Check rate limiting on load
+    checkRateLimit();
+}
+
+// Validate form and enable/disable submit button
+function validateForm() {
+    const message = document.getElementById('feedback-message');
+    const submitBtn = document.getElementById('feedback-submit');
+    const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+
+    const isValid =
+        message.value.length >= 10 &&
+        turnstileResponse && turnstileResponse.value !== '';
+
+    if (submitBtn) {
+        submitBtn.disabled = !isValid;
+    }
+}
+
+// Check rate limiting
+function checkRateLimit() {
+    const submissions = getSubmissionsToday();
+
+    if (submissions >= MAX_SUBMISSIONS_PER_DAY) {
+        const submitBtn = document.getElementById('feedback-submit');
+        const errorDiv = document.getElementById('feedback-error');
+        const errorText = document.getElementById('error-text');
+
+        if (submitBtn) submitBtn.disabled = true;
+        if (errorDiv && errorText) {
+            errorText.textContent = `You've reached the maximum of ${MAX_SUBMISSIONS_PER_DAY} submissions per day. Please try again tomorrow.`;
+            errorDiv.style.display = 'block';
+        }
+
+        return false;
+    }
+
+    return true;
+}
+
+// Get submissions count for today
+function getSubmissionsToday() {
+    const today = new Date().toDateString();
+    const stored = localStorage.getItem('feedbackSubmissions');
+
+    if (!stored) return 0;
+
+    try {
+        const data = JSON.parse(stored);
+        if (data.date === today) {
+            return data.count;
+        }
+    } catch (e) {
+        console.error('Error reading localStorage:', e);
+    }
+
+    return 0;
+}
+
+// Increment submissions count
+function incrementSubmissions() {
+    const today = new Date().toDateString();
+    const count = getSubmissionsToday() + 1;
+
+    localStorage.setItem('feedbackSubmissions', JSON.stringify({
+        date: today,
+        count: count
+    }));
+}
+
+// Handle form submission
+async function handleFeedbackSubmit(e) {
+    e.preventDefault();
+
+    // Check rate limiting
+    if (!checkRateLimit()) {
+        return;
+    }
+
+    // Honeypot check
+    const honeypot = document.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value !== '') {
+        console.log('🤖 Bot detected via honeypot');
+        showFeedbackError('Invalid submission detected.');
+        return;
+    }
+
+    // Time-based check
+    const timeSinceOpen = Date.now() - formOpenTime;
+    if (timeSinceOpen < MIN_SUBMISSION_TIME) {
+        showFeedbackError('Please take a moment to review your feedback before submitting.');
+        return;
+    }
+
+    // Get form data
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Add Web3Forms access key
+    formData.append('access_key', WEB3FORMS_KEY);
+
+    // Add additional metadata
+    formData.append('subject', 'Emmanuel.Skin Feedback');
+    formData.append('from_name', 'Emmanuel.Skin Feedback Form');
+
+    // Get Turnstile token
+    const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+    if (!turnstileResponse || !turnstileResponse.value) {
+        showFeedbackError('Please complete the verification challenge.');
+        return;
+    }
+
+    // Disable submit button
+    const submitBtn = document.getElementById('feedback-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    // Hide previous messages
+    document.getElementById('feedback-success').style.display = 'none';
+    document.getElementById('feedback-error').style.display = 'none';
+
+    try {
+        // Submit to Web3Forms
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            showFeedbackSuccess();
+            incrementSubmissions();
+            form.reset();
+            formOpenTime = Date.now(); // Reset timer
+
+            // Reset Turnstile
+            if (window.turnstile) {
+                window.turnstile.reset();
+            }
+        } else {
+            showFeedbackError(result.message || 'Something went wrong. Please try again.');
+        }
+    } catch (error) {
+        console.error('Submission error:', error);
+        showFeedbackError('Network error. Please check your connection and try again.');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+}
+
+// Show success message
+function showFeedbackSuccess() {
+    const successDiv = document.getElementById('feedback-success');
+    const errorDiv = document.getElementById('feedback-error');
+
+    if (errorDiv) errorDiv.style.display = 'none';
+    if (successDiv) {
+        successDiv.style.display = 'block';
+        successDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // Hide after 5 seconds
+        setTimeout(() => {
+            successDiv.style.display = 'none';
+        }, 5000);
+    }
+}
+
+// Show error message
+function showFeedbackError(message) {
+    const errorDiv = document.getElementById('feedback-error');
+    const errorText = document.getElementById('error-text');
+    const successDiv = document.getElementById('feedback-success');
+
+    if (successDiv) successDiv.style.display = 'none';
+    if (errorDiv && errorText) {
+        errorText.textContent = message;
+        errorDiv.style.display = 'block';
+        errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
+// Turnstile callback (called when verification completes)
+window.onTurnstileSuccess = function() {
+    validateForm();
+};
+
+console.log('✅ Feedback form initialized');

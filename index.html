@@ -192,12 +192,54 @@
                     <p>Yes! Hair products can transfer to your face, back, and chest, causing breakouts. Check everything that might touch your skin.</p>
                 </div>
             </section>
+
+            <!-- Feedback Section -->
+            <section class="content-section feedback-section">
+                <h2>Share Your Feedback</h2>
+
+                <form id="feedback-form" class="feedback-form">
+                    <!-- Honeypot field (hidden from humans, visible to bots) -->
+                    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+                    <div class="form-row">
+                        <input type="text" id="feedback-name" name="name" placeholder="Name (optional)">
+                        <input type="email" id="feedback-email" name="email" placeholder="Email (optional)">
+                    </div>
+
+                    <textarea
+                        id="feedback-message"
+                        name="message"
+                        rows="4"
+                        placeholder="Your message..."
+                        required
+                        minlength="10"
+                    ></textarea>
+
+                    <!-- Cloudflare Turnstile -->
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAB96CabUhLH7ZJ8o" data-callback="onTurnstileSuccess"></div>
+
+                    <button type="submit" id="feedback-submit" class="primary-btn" disabled>
+                        Send Feedback
+                    </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="feedback-success" class="feedback-message success-message" style="display: none;">
+                        Thank you! Your feedback has been sent.
+                    </div>
+                    <div id="feedback-error" class="feedback-message error-message" style="display: none;">
+                        <span id="error-text">Something went wrong. Please try again.</span>
+                    </div>
+                </form>
+            </section>
         </main>
 
     <footer>
-        <p>© 2025 Emmanuel.Skin | Free Pore-Clogging Ingredients Checker</p>
+        <p>© 2025 Emmanuel.Skin</p>
         <p class="disclaimer">This tool is for informational purposes only and is not a substitute for professional medical advice.</p>
     </footer>
+
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <script src="script.js"></script>
 </body>
