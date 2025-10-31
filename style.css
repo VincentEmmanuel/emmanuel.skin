@@ -592,8 +592,14 @@ textarea:focus {
 }
 
 /* Cloudflare Turnstile styling */
+.turnstile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 15px 0;
+}
+
 .cf-turnstile {
-    margin: 20px 0;
+    margin: 0;
 }
 
 /* Footer */
