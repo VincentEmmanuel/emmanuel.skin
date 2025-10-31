@@ -595,7 +595,7 @@ textarea:focus {
 .turnstile-wrapper {
     display: flex;
     justify-content: center;
-    margin: 25px 0 15px 0;
+    margin: 20px 0;
 }
 
 .cf-turnstile {

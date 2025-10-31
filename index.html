@@ -215,14 +215,14 @@
                         minlength="10"
                     ></textarea>
 
-                    <button type="submit" id="feedback-submit" class="primary-btn" disabled>
-                        Send Feedback
-                    </button>
-
                     <!-- Cloudflare Turnstile -->
                     <div class="turnstile-wrapper">
                         <div class="cf-turnstile" data-sitekey="0x4AAAAAAB96CabUhlH7ZJ8o" data-callback="onTurnstileSuccess" data-theme="light"></div>
                     </div>
+
+                    <button type="submit" id="feedback-submit" class="primary-btn" disabled>
+                        Send Feedback
+                    </button>
 
                     <!-- Success/Error Messages -->
                     <div id="feedback-success" class="feedback-message success-message" style="display: none;">
