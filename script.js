@@ -257,14 +257,23 @@ function initFeedbackForm() {
     const messageInput = document.getElementById('feedback-message');
     const submitBtn = document.getElementById('feedback-submit');
 
+    if (!form || !messageInput || !submitBtn) {
+        console.log('Feedback form elements not found');
+        return;
+    }
+
     // Track when form becomes visible/ready
     formOpenTime = Date.now();
 
     // Enable submit button when form is valid
-    if (form) {
-        form.addEventListener('input', validateForm);
-        form.addEventListener('submit', handleFeedbackSubmit);
-    }
+    form.addEventListener('input', validateForm);
+    form.addEventListener('submit', handleFeedbackSubmit);
+
+    // Also listen directly on message input for immediate response
+    messageInput.addEventListener('input', validateForm);
+
+    // Initial validation check
+    validateForm();
 }
 
 // Validate form and enable/disable submit button
