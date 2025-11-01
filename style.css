@@ -598,17 +598,6 @@ textarea:focus {
     color: var(--danger-color);
 }
 
-/* Cloudflare Turnstile styling */
-.turnstile-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.cf-turnstile {
-    margin: 0;
-}
-
 /* Footer */
 footer {
     background: #000000;

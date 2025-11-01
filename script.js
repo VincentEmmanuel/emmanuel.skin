@@ -245,7 +245,6 @@ console.log('✅ Emmanuel.Skin Ingredient Checker loaded successfully');
 // Feedback form variables
 let formOpenTime = null;
 const MIN_SUBMISSION_TIME = 3000; // 3 seconds minimum
-const MAX_SUBMISSIONS_PER_DAY = 3;
 const WEB3FORMS_KEY = '915fd905-fbbd-4ee0-b53d-c09ffb90d8ac';
 
 // Initialize feedback form
@@ -266,86 +265,23 @@ function initFeedbackForm() {
         form.addEventListener('input', validateForm);
         form.addEventListener('submit', handleFeedbackSubmit);
     }
-
-    // Check rate limiting on load
-    checkRateLimit();
 }
 
 // Validate form and enable/disable submit button
 function validateForm() {
     const message = document.getElementById('feedback-message');
     const submitBtn = document.getElementById('feedback-submit');
-    const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
 
     if (!message || !submitBtn) return;
 
-    const hasValidMessage = message.value.length >= 10;
-    const hasTurnstileToken = turnstileResponse && turnstileResponse.value && turnstileResponse.value.trim() !== '';
-
-    const isValid = hasValidMessage && hasTurnstileToken;
+    const isValid = message.value.length >= 10;
 
     submitBtn.disabled = !isValid;
-}
-
-// Check rate limiting
-function checkRateLimit() {
-    const submissions = getSubmissionsToday();
-
-    if (submissions >= MAX_SUBMISSIONS_PER_DAY) {
-        const submitBtn = document.getElementById('feedback-submit');
-        const errorDiv = document.getElementById('feedback-error');
-        const errorText = document.getElementById('error-text');
-
-        if (submitBtn) submitBtn.disabled = true;
-        if (errorDiv && errorText) {
-            errorText.textContent = `You've reached the maximum of ${MAX_SUBMISSIONS_PER_DAY} submissions per day. Please try again tomorrow.`;
-            errorDiv.style.display = 'block';
-        }
-
-        return false;
-    }
-
-    return true;
-}
-
-// Get submissions count for today
-function getSubmissionsToday() {
-    const today = new Date().toDateString();
-    const stored = localStorage.getItem('feedbackSubmissions');
-
-    if (!stored) return 0;
-
-    try {
-        const data = JSON.parse(stored);
-        if (data.date === today) {
-            return data.count;
-        }
-    } catch (e) {
-        console.error('Error reading localStorage:', e);
-    }
-
-    return 0;
-}
-
-// Increment submissions count
-function incrementSubmissions() {
-    const today = new Date().toDateString();
-    const count = getSubmissionsToday() + 1;
-
-    localStorage.setItem('feedbackSubmissions', JSON.stringify({
-        date: today,
-        count: count
-    }));
 }
 
 // Handle form submission
 async function handleFeedbackSubmit(e) {
     e.preventDefault();
-
-    // Check rate limiting
-    if (!checkRateLimit()) {
-        return;
-    }
 
     // Honeypot check
     const honeypot = document.querySelector('input[name="website"]');
@@ -373,13 +309,6 @@ async function handleFeedbackSubmit(e) {
     formData.append('subject', 'Emmanuel.Skin Feedback');
     formData.append('from_name', 'Emmanuel.Skin Feedback Form');
 
-    // Get Turnstile token
-    const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
-    if (!turnstileResponse || !turnstileResponse.value) {
-        showFeedbackError('Please complete the verification challenge.');
-        return;
-    }
-
     // Disable submit button
     const submitBtn = document.getElementById('feedback-submit');
     const originalText = submitBtn.textContent;
@@ -401,14 +330,8 @@ async function handleFeedbackSubmit(e) {
 
         if (result.success) {
             showFeedbackSuccess();
-            incrementSubmissions();
             form.reset();
             formOpenTime = Date.now(); // Reset timer
-
-            // Reset Turnstile
-            if (window.turnstile) {
-                window.turnstile.reset();
-            }
         } else {
             showFeedbackError(result.message || 'Something went wrong. Please try again.');
         }
@@ -451,13 +374,5 @@ function showFeedbackError(message) {
         errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
-
-// Turnstile callback (called when verification completes)
-window.onTurnstileSuccess = function() {
-    // Small delay to ensure token is populated in DOM
-    setTimeout(() => {
-        validateForm();
-    }, 100);
-};
 
 console.log('✅ Feedback form initialized');
