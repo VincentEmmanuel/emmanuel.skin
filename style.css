@@ -542,13 +542,20 @@ textarea:focus {
 }
 
 .feedback-form textarea {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     resize: vertical;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin: 0 0 20px 0;
+    text-align: left;
 }
 
 #feedback-submit {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 1rem;
     padding: 16px;
     margin-right: 0;
