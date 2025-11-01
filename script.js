@@ -1,6 +1,39 @@
 // Global variables
 let ingredientsDB = [];
 
+// Custom notification function
+function showNotification(message) {
+    const notification = document.getElementById('custom-notification');
+    const messageEl = document.getElementById('notification-message');
+    const closeBtn = document.getElementById('notification-close');
+
+    if (!notification || !messageEl || !closeBtn) return;
+
+    messageEl.textContent = message;
+    notification.style.display = 'flex';
+
+    // Close on button click
+    closeBtn.onclick = () => {
+        notification.style.display = 'none';
+    };
+
+    // Close on background click
+    notification.onclick = (e) => {
+        if (e.target === notification) {
+            notification.style.display = 'none';
+        }
+    };
+
+    // Close on Escape key
+    const escHandler = (e) => {
+        if (e.key === 'Escape') {
+            notification.style.display = 'none';
+            document.removeEventListener('keydown', escHandler);
+        }
+    };
+    document.addEventListener('keydown', escHandler);
+}
+
 // Load ingredients database when page loads
 document.addEventListener('DOMContentLoaded', () => {
     loadIngredientsDatabase();
@@ -15,7 +48,7 @@ async function loadIngredientsDatabase() {
         const data = await response.json();
         ingredientsDB = data.ingredients;
     } catch (error) {
-        alert('Error loading ingredients database. Please refresh the page.');
+        showNotification('Error loading ingredients database. Please refresh the page.');
     }
 }
 
@@ -39,22 +72,23 @@ function setupEventListeners() {
 // Main function to check ingredients
 function checkIngredients() {
     const input = document.getElementById('ingredients-input').value.trim();
-    
+
     if (!input) {
-        alert('Please paste some ingredients first!');
+        showNotification('Please paste some ingredients first!');
         return;
     }
 
     if (ingredientsDB.length === 0) {
-        alert('Database still loading, please wait a moment...');
+        showNotification('Database still loading, please wait a moment...');
         return;
     }
 
     // Parse user input
     const userIngredients = parseIngredients(input);
-    
+
+
     if (userIngredients.length === 0) {
-        alert('No valid ingredients found. Please check your input.');
+        showNotification('No valid ingredients found. Please check your input.');
         return;
     }
 
