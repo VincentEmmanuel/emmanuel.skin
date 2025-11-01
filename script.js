@@ -5,6 +5,7 @@ let ingredientsDB = [];
 document.addEventListener('DOMContentLoaded', () => {
     loadIngredientsDatabase();
     setupEventListeners();
+    initFeedbackForm();
 });
 
 // Load ingredients from JSON file
@@ -13,9 +14,7 @@ async function loadIngredientsDatabase() {
         const response = await fetch('ingredients.json');
         const data = await response.json();
         ingredientsDB = data.ingredients;
-        console.log(`✅ Loaded ${ingredientsDB.length} ingredients from database`);
     } catch (error) {
-        console.error('❌ Error loading ingredients database:', error);
         alert('Error loading ingredients database. Please refresh the page.');
     }
 }
@@ -232,11 +231,8 @@ function clearInput() {
 
 // Handle errors gracefully
 window.addEventListener('error', (e) => {
-    console.error('Application error:', e.error);
+    // Silent error handling
 });
-
-// Log when script is loaded
-console.log('✅ Emmanuel.Skin Ingredient Checker loaded successfully');
 
 // ============================================
 // FEEDBACK FORM HANDLING
@@ -248,17 +244,12 @@ const MIN_SUBMISSION_TIME = 3000; // 3 seconds minimum
 const WEB3FORMS_KEY = '915fd905-fbbd-4ee0-b53d-c09ffb90d8ac';
 
 // Initialize feedback form
-document.addEventListener('DOMContentLoaded', () => {
-    initFeedbackForm();
-});
-
 function initFeedbackForm() {
     const form = document.getElementById('feedback-form');
     const messageInput = document.getElementById('feedback-message');
     const submitBtn = document.getElementById('feedback-submit');
 
     if (!form || !messageInput || !submitBtn) {
-        console.log('Feedback form elements not found');
         return;
     }
 
@@ -295,7 +286,6 @@ async function handleFeedbackSubmit(e) {
     // Honeypot check
     const honeypot = document.querySelector('input[name="website"]');
     if (honeypot && honeypot.value !== '') {
-        console.log('🤖 Bot detected via honeypot');
         showFeedbackError('Invalid submission detected.');
         return;
     }
@@ -345,11 +335,11 @@ async function handleFeedbackSubmit(e) {
             showFeedbackError(result.message || 'Something went wrong. Please try again.');
         }
     } catch (error) {
-        console.error('Submission error:', error);
         showFeedbackError('Network error. Please check your connection and try again.');
     } finally {
-        submitBtn.disabled = false;
         submitBtn.textContent = originalText;
+        // Re-validate to set proper button state
+        validateForm();
     }
 }
 
@@ -383,5 +373,3 @@ function showFeedbackError(message) {
         errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
-
-console.log('✅ Feedback form initialized');
